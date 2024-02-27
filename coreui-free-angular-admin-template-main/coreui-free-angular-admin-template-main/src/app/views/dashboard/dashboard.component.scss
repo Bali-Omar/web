@@ -1,0 +1,26 @@
+:host {
+  .legend {
+    small {
+      font-size: x-small;
+    }
+  }
+}
+.callout-info {
+  background-color: #006A4E !important;
+
+}
+
+.example {
+  &:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+
+  .div.wrapper.d-flex.flex.flex-column.min-vh-100.bg-light.dark{
+    background-color: #006A4E !important;
+  }
+
+ // .div.body.flex-grow-1.px-3{
+  //  background-color: #006A4E !important;
+  // }
+  // Other styles remain unchanged
+}

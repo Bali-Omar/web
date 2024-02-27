@@ -1,0 +1,189 @@
+<c-row>
+  <!-- Existing Widgets -->
+  <!-- Widget 1 -->
+  <c-col sm="6" xl="3">
+    <c-widget-stat-a
+      class="mb-4"
+      color="success"
+      title="Temperature Level"
+    >
+      <ng-template cTemplateId="widgetValueTemplate" ngPreserveWhitespaces>
+        <div class="widget-value">26°C</div>
+      </ng-template>
+      <ng-template cTemplateId="widgetActionTemplate">
+        <c-dropdown alignment="end" variant="btn-group">
+          <button [caret]="false" cButton cDropdownToggle class="p-0" color="transparent">
+            <svg cIcon class="text-high-emphasis-inverse" name="cilOptions"></svg>
+          </button>
+          <ul cDropdownMenu>
+            <li><a routerLink="./" cDropdownItem>Activate fan</a></li>
+          </ul>
+        </c-dropdown>
+      </ng-template>
+      <ng-template cTemplateId="widgetChartTemplate">
+        <c-chart [data]="data[0]" [options]="options[0]" class="mt-3 mx-3" height="70" [type]="'line'"></c-chart>
+      </ng-template>
+    </c-widget-stat-a>
+  </c-col>
+
+  <!-- Widget 2 -->
+  <c-col sm="6" xl="3">
+    <c-widget-stat-a
+      [title]="'pH Level'"
+      class="mb-4"
+      color="success"
+    >
+      <ng-template cTemplateId="widgetValueTemplate" ngPreserveWhitespaces>
+        <div class="widget-value">40 </div>
+      </ng-template>
+      <ng-template cTemplateId="widgetActionTemplate">
+        <c-dropdown alignment="end" variant="btn-group">
+          <button [caret]="false" cButton cDropdownToggle class="p-0" color="transparent">
+            <svg cIcon class="text-high-emphasis-inverse" name="cilOptions"></svg>
+          </button>
+          <ul cDropdownMenu>
+            <li><a routerLink="./" cDropdownItem></a></li>
+            <li><a routerLink="./" cDropdownItem>Another action</a></li>
+            <li><a routerLink="./" cDropdownItem>Something else here</a></li>
+            <li><a [disabled]="true" routerLink="./" cDropdownItem>Disabled</a></li>
+          </ul>
+        </c-dropdown>
+      </ng-template>
+      <ng-template cTemplateId="widgetChartTemplate">
+        <c-chart [data]="data[1]" [options]="options[1]" class="mt-3 mx-3" height="70" type="line"></c-chart>
+      </ng-template>
+    </c-widget-stat-a>
+  </c-col>
+
+  <!-- Widget 3 -->
+  <c-col sm="6" xl="3">
+    <c-widget-stat-a
+
+      [title]="'Humidity Level'"
+      class="mb-4"
+      color="success"
+    >
+      <ng-template cTemplateId="widgetValueTemplate" ngPreserveWhitespaces>
+        <div class="widget-value">2 (g/m-3)</div>
+      </ng-template>
+      <ng-template cTemplateId="widgetActionTemplate">
+        <c-dropdown alignment="end" variant="btn-group">
+          <button [caret]="false" cButton cDropdownToggle class="p-0" color="transparent">
+            <svg cIcon class="text-high-emphasis-inverse" name="cilOptions"></svg>
+          </button>
+          <ul cDropdownMenu>
+            <li><a routerLink="./" cDropdownItem>Action</a></li>
+            <li><a routerLink="./" cDropdownItem>Another action</a></li>
+            <li><a routerLink="./" cDropdownItem>Something else here</a></li>
+            <li><a [disabled]="true" routerLink="./" cDropdownItem>Disabled</a></li>
+          </ul>
+        </c-dropdown>
+      </ng-template>
+      <ng-template cTemplateId="widgetChartTemplate">
+        <c-chart [data]="data[2]" [options]="options[2]" class="mt-3" height="70" type="line"></c-chart>
+      </ng-template>
+    </c-widget-stat-a>
+  </c-col>
+
+  <!-- Widget 4 -->
+  <c-col sm="6" xl="3">
+    <c-widget-stat-a
+      [title]="'Water Temperature Level '"
+      class="mb-4"
+      color="success"
+    >
+      <ng-template cTemplateId="widgetValueTemplate" ngPreserveWhitespaces>
+        <div class="widget-value">27°C</div>
+      </ng-template>
+      <ng-template cTemplateId="widgetActionTemplate">
+        <c-dropdown alignment="end" variant="btn-group">
+          <button [caret]="false" cButton cDropdownToggle class="p-0" color="transparent">
+            <svg cIcon class="text-high-emphasis-inverse" name="cilOptions"></svg>
+          </button>
+          <ul cDropdownMenu>
+            <li><a routerLink="./" cDropdownItem>Action</a></li>
+            <li><a routerLink="./" cDropdownItem>Another action</a></li>
+            <li><a routerLink="./" cDropdownItem>Something else here</a></li>
+            <li><a [disabled]="true" routerLink="./" cDropdownItem>Disabled</a></li>
+          </ul>
+        </c-dropdown>
+      </ng-template>
+      <ng-template cTemplateId="widgetChartTemplate">
+        <c-chart [data]="data[3]" [options]="options[3]" class="mt-3 mx-3" height="70" type="bar"></c-chart>
+      </ng-template>
+    </c-widget-stat-a>
+  </c-col>
+  
+   <!-- New Widgets -->
+  <!-- Widget 5 -->
+  <c-col sm="6" xl="3">
+    <!-- Add your fifth widget here -->
+
+    <c-widget-stat-a
+    [title]="'Electroconductivity Level '"
+    class="mb-4"
+    color="success"
+  >
+    <ng-template cTemplateId="widgetValueTemplate" ngPreserveWhitespaces>
+      <span> 27 (S/m)  </span>
+
+    
+
+      
+      <!-- <span class="fs-6 fw-normal">
+        (-23.6% <svg cIcon name="cilArrowBottom"></svg>)
+      </span>-->
+    </ng-template>
+    <ng-template cTemplateId="widgetActionTemplate">
+      <c-dropdown alignment="end" variant="btn-group">
+        <button [caret]="false" cButton cDropdownToggle class="p-0" color="transparent">
+          <svg cIcon class="text-high-emphasis-inverse" name="cilOptions"></svg>
+        </button>
+        <ul cDropdownMenu>
+          <li><a routerLink="./" cDropdownItem>Action</a></li>
+          <li><a routerLink="./" cDropdownItem>Another action</a></li>
+          <li><a routerLink="./" cDropdownItem>Something else here</a></li>
+          <li><a [disabled]="true" routerLink="./" cDropdownItem>Disabled</a></li>
+        </ul>
+      </c-dropdown>
+    </ng-template>
+    <ng-template cTemplateId="widgetChartTemplate">
+      <c-chart [data]="data[3]" [options]="options[3]" class="mt-3 mx-3" height="70" type="bar"></c-chart>
+    </ng-template>
+  </c-widget-stat-a>
+  </c-col>
+
+  <!-- Widget 6 -->
+  <c-col sm="6" xl="3">
+    <!-- Add your sixth widget here -->
+    <c-widget-stat-a
+    [title]="'Dissolved oxygen level '"
+    class="mb-4"
+    color="success"
+  >
+    <ng-template cTemplateId="widgetValueTemplate" ngPreserveWhitespaces>
+      <span> 27 (mg/L) </span>
+      <!-- <span class="fs-6 fw-normal">
+        (-23.6% <svg cIcon name="cilArrowBottom"></svg>)
+      </span>-->
+      
+    </ng-template>
+    <ng-template cTemplateId="widgetActionTemplate">
+      <c-dropdown alignment="end" variant="btn-group">
+        <button [caret]="false" cButton cDropdownToggle class="p-0" color="transparent">
+          <svg cIcon class="text-high-emphasis-inverse" name="cilOptions"></svg>
+        </button>
+        <ul cDropdownMenu>
+          <li><a routerLink="./" cDropdownItem>Action</a></li>
+          <li><a routerLink="./" cDropdownItem>Another action</a></li>
+          <li><a routerLink="./" cDropdownItem>Something else here</a></li>
+          <li><a [disabled]="true" routerLink="./" cDropdownItem>Disabled</a></li>
+        </ul>
+      </c-dropdown>
+    </ng-template>
+    <ng-template cTemplateId="widgetChartTemplate">
+      <c-chart [data]="data[3]" [options]="options[3]" class="mt-3 mx-3" height="70" type="bar"></c-chart>
+    </ng-template>
+  </c-widget-stat-a>
+  </c-col>
+</c-row>
